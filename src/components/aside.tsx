@@ -4,7 +4,7 @@ import { Separator } from "./ui/separator";
 
 export function Aside() {
   return (
-    <div className="p-8 fixed inset-0 max-w-[400px] border-r border-border bg-background ">
+    <div className="p-8 fixed inset-0 max-w-[350px] border-r border-border bg-background ">
       <div className="space-y-8 flex flex-col h-full">
         <Input placeholder="Buscar por lugares..." />
         <Sun className="w-80 h-80" />
