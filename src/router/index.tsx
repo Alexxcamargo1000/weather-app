@@ -1,6 +1,6 @@
 import Home from "@/pages/Home";
 import { Week } from "@/pages/Week";
-import { LayoutApp } from "@/pages/layout";
+import { LayoutApp } from "@/layout";
 import { Route, createBrowserRouter, createRoutesFromElements } from "react-router-dom";
 
 export const router = createBrowserRouter(
