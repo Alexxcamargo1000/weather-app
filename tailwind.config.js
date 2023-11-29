@@ -17,7 +17,7 @@ module.exports = {
     },
     extend: {
       gridTemplateColumns: {
-        app: '400px 1fr',
+        app: '350px 1fr',
       },
       colors: {
         border: "hsl(var(--border))",

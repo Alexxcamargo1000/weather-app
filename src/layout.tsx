@@ -8,10 +8,10 @@ interface layoutAppProps {
 
 export function LayoutApp({ children }: layoutAppProps) {
   return (
-    <div className="h-screen w-full bg-muted">
+    <div className="">
       <div className="grid grid-cols-app">
         <Aside /> 
-        <div className="col-start-2 min-h bg-muted flex flex-col h-screen container ">
+        <div className="col-start-2 bg-muted min-h flex flex-col min-h-screen container ">
           <div className="p-8 flex justify-between">
             <MainNavigation />
             <ModeToggle />
