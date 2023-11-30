@@ -1,12 +1,38 @@
 import { Input } from "./ui/input";
 import { Cloud, CloudRain, Sun } from "lucide-react";
 import { Separator } from "./ui/separator";
-
+import { api } from "@/lib/api";
+import { useState, FormEvent }from 'react'
 export function Aside() {
+  const [location , setLocation] = useState('')
+  const [loading , setLoading] = useState(false)
+
+  async function handleGetLocation(e: FormEvent) {
+    e.preventDefault()
+    setLoading(true)
+   const response = await api.get("forecast.json" , {
+      params: {
+        q: location
+      }
+    })
+    setLoading(false)
+
+    console.log(response.data)
+    
+  }
+
+
   return (
     <div className="p-8 fixed inset-0 max-w-[350px] border-r border-border bg-background ">
       <div className="space-y-8 flex flex-col h-full">
-        <Input placeholder="Buscar por lugares..." />
+        <form onSubmit={handleGetLocation}>
+        <Input 
+          placeholder="Buscar por lugares..."
+          value={location}
+          onChange={(e) => setLocation(e.target.value)}
+          disabled={loading}
+       />
+        </form>
         <Sun className="w-80 h-80" />
 
         <span className="font-thin text-8xl">12°C</span>

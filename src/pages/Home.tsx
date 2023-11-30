@@ -1,5 +1,6 @@
 
 import { CardWeather } from "@/components/ui/card-weather";
+import { CardVisibility } from "@/components/ui/card/Visibility";
 import { CardHumidity } from "@/components/ui/card/humidity";
 import { CardSun } from "@/components/ui/card/sun";
 import { CardTemperature } from "@/components/ui/card/temperature";
@@ -48,6 +49,9 @@ export default function Home() {
           indicator="Moderada"
           percentage={12}
         />
+        <CardVisibility 
+          distance={5.4}
+          indicator="Média"/>
 
       </div>
     </div>
