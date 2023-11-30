@@ -1,5 +1,6 @@
 
 import { CardWeather } from "@/components/ui/card-weather";
+import { CardUVIndex } from "@/components/ui/card/UVIndex";
 import { CardVisibility } from "@/components/ui/card/Visibility";
 import { CardHumidity } from "@/components/ui/card/humidity";
 import { CardSun } from "@/components/ui/card/sun";
@@ -52,6 +53,10 @@ export default function Home() {
         <CardVisibility 
           distance={5.4}
           indicator="Média"/>
+
+        <CardUVIndex 
+          index={5}
+          />
 
       </div>
     </div>

@@ -12,13 +12,13 @@ export function Aside() {
     setLoading(true)
    const response = await api.get("forecast.json" , {
       params: {
-        q: location
+        q: location,
+        
       }
     })
     setLoading(false)
 
-    console.log(response.data)
-    
+    console.log(response.data)    
   }
 
 
