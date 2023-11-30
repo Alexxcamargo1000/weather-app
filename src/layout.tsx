@@ -10,14 +10,16 @@ export function LayoutApp({ children }: layoutAppProps) {
   return (
     <div className="">
       <div className="grid grid-cols-app">
-        <Aside /> 
-        <div className="col-start-2 bg-muted min-h flex flex-col min-h-screen container ">
-          <div className="p-8 flex justify-between">
-            <MainNavigation />
-            <ModeToggle />
-          </div>
-          <div className="flex-1 p-8">
-               {children}
+        <Aside />
+        <div className="pl-10 col-start-2 bg-muted min-h flex  flex-col min-h-screen ">
+          <div className="max-w-[1100px]">
+            <div className="p-8 flex justify-between">
+              <MainNavigation />
+              <ModeToggle />
+            </div>
+            <div className="flex-1 p-8">
+              {children}
+            </div>
           </div>
         </div>
       </div>
